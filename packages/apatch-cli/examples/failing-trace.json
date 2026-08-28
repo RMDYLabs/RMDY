@@ -1,0 +1,36 @@
+{
+  "session_id": "demo-session",
+  "user": {
+    "email": "buyer@example.com",
+    "phone": "+1 202 555 0198"
+  },
+  "api_key": "sk-demo_12345678901234567890",
+  "events": [
+    {
+      "type": "tool_call",
+      "tool": "inventory.search",
+      "arguments": { "query": "black running shoes" },
+      "status": "success"
+    },
+    {
+      "type": "tool_call",
+      "tool": "inventory.search",
+      "arguments": { "query": "black running shoes" },
+      "status": "success"
+    },
+    {
+      "type": "tool_call",
+      "tool": "inventory.search",
+      "arguments": { "query": "black running shoes" },
+      "status": "success"
+    },
+    {
+      "type": "tool_call",
+      "tool": "commerce.checkout",
+      "arguments": {
+        "product_id": "shoe-217"
+      }
+    }
+  ],
+  "output": "Order placed. Details sent to buyer@example.com."
+}

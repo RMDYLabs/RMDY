@@ -1,0 +1,61 @@
+{
+  "cases": [
+    {
+      "name": "blocks the third identical search",
+      "input": {
+        "history": [
+          { "tool": "inventory.search", "arguments": { "query": "running shoes", "delivery": "today" } },
+          { "tool": "inventory.search", "arguments": { "query": "running shoes", "delivery": "today" } }
+        ],
+        "current": { "tool": "inventory.search", "arguments": { "query": "running shoes", "delivery": "today" } }
+      },
+      "expect": { "allow": false, "action": "replan", "repetitions": 3 }
+    },
+    {
+      "name": "allows the first search",
+      "input": { "history": [], "current": { "tool": "inventory.search", "arguments": { "query": "boots" } } },
+      "expect": { "allow": true }
+    },
+    {
+      "name": "allows the second identical search",
+      "input": {
+        "history": [{ "tool": "inventory.search", "arguments": { "query": "boots" } }],
+        "current": { "tool": "inventory.search", "arguments": { "query": "boots" } }
+      },
+      "expect": { "allow": true }
+    },
+    {
+      "name": "allows a changed filter",
+      "input": {
+        "history": [
+          { "tool": "inventory.search", "arguments": { "query": "boots", "size": 9 } },
+          { "tool": "inventory.search", "arguments": { "query": "boots", "size": 9 } }
+        ],
+        "current": { "tool": "inventory.search", "arguments": { "query": "boots", "size": 10 } }
+      },
+      "expect": { "allow": true }
+    },
+    {
+      "name": "normalizes argument key order",
+      "input": {
+        "history": [
+          { "tool": "inventory.search", "arguments": { "query": "coat", "limit": 5 } },
+          { "tool": "inventory.search", "arguments": { "limit": 5, "query": "coat" } }
+        ],
+        "current": { "tool": "inventory.search", "arguments": { "query": "coat", "limit": 5 } }
+      },
+      "expect": { "allow": false, "action": "replan", "repetitions": 3 }
+    },
+    {
+      "name": "resets after a different action",
+      "input": {
+        "history": [
+          { "tool": "inventory.search", "arguments": { "query": "coat" } },
+          { "tool": "browser.inspect", "arguments": { "selector": "#results" } }
+        ],
+        "current": { "tool": "inventory.search", "arguments": { "query": "coat" } }
+      },
+      "expect": { "allow": true }
+    }
+  ]
+}

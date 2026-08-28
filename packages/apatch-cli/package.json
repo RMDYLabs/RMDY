@@ -1,0 +1,40 @@
+{
+  "name": "rmdy",
+  "version": "0.6.1",
+  "description": "Verified runtime fixes for AI agents",
+  "type": "module",
+  "bin": {
+    "rmdy": "dist/index.js",
+    "faultmesh": "dist/index.js",
+    "apatch": "dist/index.js"
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./redact": "./dist/redact.js",
+    "./detect": "./dist/detect.js",
+    "./spec": "./dist/spec.js",
+    "./attest": "./dist/attest.js"
+  },
+  "files": [
+    "dist",
+    "builtins",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "dependencies": {
+    "yaml": "^2.8.1"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai-agents",
+    "guardrails",
+    "rmdy",
+    "agent-evals",
+    "regression-testing",
+    "privacy",
+    "cli"
+  ]
+}

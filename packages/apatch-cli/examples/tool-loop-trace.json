@@ -1,0 +1,31 @@
+{
+  "session_id": "browser-agent-demo",
+  "user": {
+    "email": "shopper@example.com",
+    "phone": "+1 202 555 0148"
+  },
+  "events": [
+    {
+      "type": "tool_call",
+      "tool": "inventory.search",
+      "arguments": { "query": "running shoes", "delivery": "today" },
+      "status": "success",
+      "output": { "results": [], "state_changed": false }
+    },
+    {
+      "type": "tool_call",
+      "tool": "inventory.search",
+      "arguments": { "query": "running shoes", "delivery": "today" },
+      "status": "success",
+      "output": { "results": [], "state_changed": false }
+    },
+    {
+      "type": "tool_call",
+      "tool": "inventory.search",
+      "arguments": { "query": "running shoes", "delivery": "today" },
+      "status": "success",
+      "output": { "results": [], "state_changed": false }
+    }
+  ],
+  "output": "No result found for shopper@example.com. Retrying the same search."
+}

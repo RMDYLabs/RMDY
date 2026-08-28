@@ -1,0 +1,76 @@
+{
+  "cases": [
+    {
+      "name": "blocks checkout when every constraint is absent",
+      "input": {
+        "tool": "commerce.checkout",
+        "arguments": {
+          "product_id": "shoe-217"
+        }
+      },
+      "expect": {
+        "allow": false,
+        "missing": ["size", "price", "seller", "delivery"]
+      }
+    },
+    {
+      "name": "blocks checkout when delivery is absent",
+      "input": {
+        "tool": "commerce.checkout",
+        "arguments": {
+          "product_id": "shoe-217",
+          "size": "42",
+          "price": 89,
+          "seller": "verified-store"
+        }
+      },
+      "expect": {
+        "allow": false,
+        "missing": ["delivery"]
+      }
+    },
+    {
+      "name": "blocks checkout when a constraint is empty",
+      "input": {
+        "tool": "commerce.checkout",
+        "arguments": {
+          "product_id": "shoe-217",
+          "size": "42",
+          "price": 89,
+          "seller": "",
+          "delivery": "2026-09-02"
+        }
+      },
+      "expect": {
+        "allow": false,
+        "missing": ["seller"]
+      }
+    },
+    {
+      "name": "allows checkout after every constraint is verified",
+      "input": {
+        "tool": "commerce.checkout",
+        "arguments": {
+          "product_id": "shoe-217",
+          "size": "42",
+          "price": 89,
+          "seller": "verified-store",
+          "delivery": "2026-09-02"
+        }
+      },
+      "expect": {
+        "allow": true
+      }
+    },
+    {
+      "name": "does not interfere with unrelated tools",
+      "input": {
+        "tool": "inventory.search",
+        "arguments": {}
+      },
+      "expect": {
+        "allow": true
+      }
+    }
+  ]
+}

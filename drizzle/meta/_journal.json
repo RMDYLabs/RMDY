@@ -1,0 +1,41 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1787926665736,
+      "tag": "0000_cynical_rage",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1787932845685,
+      "tag": "0001_neat_rawhide_kid",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1787934588215,
+      "tag": "0002_wild_rictor",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1787937379413,
+      "tag": "0003_smart_hemingway",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1787941736615,
+      "tag": "0004_premium_titania",
+      "breakpoints": true
+    }
+  ]
+}

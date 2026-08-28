@@ -1,0 +1,26 @@
+schema: apatch/v0.1
+id: AP-0042
+name: purchase-constraint-validator
+version: 0.1.0
+description: Blocks checkout until size, price, seller, and delivery constraints are explicitly present.
+runtimes:
+  - openai-agents
+  - langgraph
+  - custom
+trigger:
+  type: tool_call
+  tool: commerce.checkout
+intervention:
+  type: require_tool_arguments
+  tool: commerce.checkout
+  required:
+    - size
+    - price
+    - seller
+    - delivery
+  on_failure: block
+verification:
+  fixture: ./cases/regression.json
+  minimum_pass_rate: 1
+privacy:
+  redaction: local_required
