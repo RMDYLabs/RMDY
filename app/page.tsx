@@ -551,7 +551,7 @@ privacy:
           <h2>Start with the<br/>failure.</h2>
           <p>The CLI now generates a real OpenAI Agents SDK function-tool guardrail. Installed patches run before your custom tool executes: AP-0051 blocks a repeated third call and tells the agent to re-plan, while AP-0042 rejects incomplete checkout arguments.</p>
           <div className="builder-actions">
-            <a className="button button-lime" href="/downloads/rmdy-0.6.1.tgz" download>Download RMDY CLI <span>↓</span></a>
+            <a className="button button-lime" href="https://github.com/RMDYLabs/RMDY/releases/download/v0.6.1/rmdy-0.6.1.tgz">Download RMDY CLI <span>↓</span></a>
             <button className="builder-copy-button" type="button" onClick={() => copy('npm install -g ./rmdy-0.6.1.tgz', 'Install command copied')}>Copy install command ↗</button>
           </div>
         </div>
