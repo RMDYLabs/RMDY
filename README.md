@@ -20,9 +20,13 @@ rmdy install AP-0051 --runtime openai-agents
 
 RMDY 0.x remains compatible with the `apatch/v0.1` package format and AP identifiers. The legacy `apatch` and `faultmesh` executables are retained as aliases during the alpha.
 
-The public alpha is live at [rmdy-repair-network.ahmed186aa.chatgpt.site](https://rmdy-repair-network.ahmed186aa.chatgpt.site). Until npm publishing is connected, the tested RMDY CLI tarball is available from the site's **Get the CLI** button.
+The public alpha is live at [rmdy-repair-network.ahmed186aa.chatgpt.site](https://rmdy-repair-network.ahmed186aa.chatgpt.site). Install the public CLI from npm:
 
-Release candidate: `rmdy-0.6.1.tgz` · SHA-256 `C4350D366B0DA2DA794A26129E2B0AD600AE19FFD6A9DC819EC58006D349A917`.
+```sh
+npm install --global @rmdylabs/rmdy
+```
+
+The signed release archive remains available as `rmdy-0.6.1.tgz` · SHA-256 `C4350D366B0DA2DA794A26129E2B0AD600AE19FFD6A9DC819EC58006D349A917`.
 
 ## What is real today
 

@@ -7,7 +7,8 @@
 - [x] Pack the CLI with `npm run pack:cli` and verify the archive in a clean temporary directory.
 - [x] Record the archive SHA-256 checksum: `C4350D366B0DA2DA794A26129E2B0AD600AE19FFD6A9DC819EC58006D349A917` (`rmdy-0.6.1.tgz`).
 - [x] Publish the source repository before publishing the npm package.
-- [ ] Publish npm with provenance from the public repository release workflow.
+- [x] Publish `@rmdylabs/rmdy@0.6.1` publicly on npm.
+- [ ] Configure npm trusted publishing so future releases receive provenance automatically.
 
 ## Product truth
 

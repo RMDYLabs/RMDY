@@ -540,7 +540,7 @@ privacy:
         <div className="builder-terminal">
           <div className="terminal-header"><span>RMDY CLI · 0.6.1</span><i>REGISTRY-REPLAY READY</i></div>
           <div className="terminal-body">
-            <p><span>01</span><code><b>$</b> npm install -g ./rmdy-0.6.1.tgz</code></p>
+            <p><span>01</span><code><b>$</b> npm install -g @rmdylabs/rmdy</code></p>
             <p><span>02</span><code><b>$</b> rmdy install AP-0051 --runtime openai-agents</code></p>
             <p><span>03</span><code><b>$</b> import {'{'} applyAgentPatches {'}'} from &apos;./.apatch/runtime/openai-agents.mjs&apos;</code></p>
             <div className="terminal-result"><i>✓</i><span><strong>TOOL GUARDRAIL ACTIVE</strong><small>identical third call blocked · agent instructed to re-plan</small></span></div>
@@ -551,8 +551,8 @@ privacy:
           <h2>Start with the<br/>failure.</h2>
           <p>The CLI now generates a real OpenAI Agents SDK function-tool guardrail. Installed patches run before your custom tool executes: AP-0051 blocks a repeated third call and tells the agent to re-plan, while AP-0042 rejects incomplete checkout arguments.</p>
           <div className="builder-actions">
-            <a className="button button-lime" href="https://github.com/RMDYLabs/RMDY/releases/download/v0.6.1/rmdy-0.6.1.tgz">Download RMDY CLI <span>↓</span></a>
-            <button className="builder-copy-button" type="button" onClick={() => copy('npm install -g ./rmdy-0.6.1.tgz', 'Install command copied')}>Copy install command ↗</button>
+            <a className="button button-lime" href="https://www.npmjs.com/package/@rmdylabs/rmdy" target="_blank" rel="noreferrer">View RMDY on npm <span>↗</span></a>
+            <button className="builder-copy-button" type="button" onClick={() => copy('npm install -g @rmdylabs/rmdy', 'Install command copied')}>Copy install command ↗</button>
           </div>
         </div>
       </section>
