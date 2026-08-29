@@ -16,7 +16,7 @@ RMDY turns real AI-agent failures into privacy-safe regression cases and verifie
 Install the public CLI:
 
 ```sh
-npm install --global rmdy
+npm install --global @rmdylabs/rmdy
 rmdy --version
 ```
 
