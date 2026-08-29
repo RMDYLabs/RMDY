@@ -2,6 +2,7 @@
   "name": "rmdy",
   "version": "0.6.1",
   "description": "Verified runtime fixes for AI agents",
+  "author": "RMDY Labs",
   "type": "module",
   "bin": {
     "rmdy": "dist/index.js",
@@ -23,6 +24,18 @@
   ],
   "engines": {
     "node": ">=22.13.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RMDYLabs/RMDY.git",
+    "directory": "packages/apatch-cli"
+  },
+  "homepage": "https://rmdy-repair-network.ahmed186aa.chatgpt.site",
+  "bugs": {
+    "url": "https://github.com/RMDYLabs/RMDY/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "dependencies": {
     "yaml": "^2.8.1"

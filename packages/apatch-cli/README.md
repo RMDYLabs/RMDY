@@ -13,13 +13,14 @@ RMDY turns real AI-agent failures into privacy-safe regression cases and verifie
 
 ## Install
 
-From the project checkout:
+Install the public CLI:
 
 ```sh
-npm install
-npm run build:cli
-npm link --workspace rmdy
+npm install --global rmdy
+rmdy --version
 ```
+
+Requires Node.js 22.13 or newer.
 
 ## Try it
 
